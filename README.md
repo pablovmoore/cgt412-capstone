@@ -1,5 +1,8 @@
-# cgt412-capstone
-An ongoing repository of my progress on the redesign of CVS Health's website
+# CGT 412: Senior Capstone - CVS Health Redesign
+An ongoing repository of my progress on the redesign of CVS Health's website.
+
+## Overview
+This project came about after observing how the current CVS Health website lacks in some UX related areas. The goal of this project is to redesign the existing CVS Health website in a way that 1) follows modern UX standards and 2) accomodates its primary demographic (the elderly).
 
 Attached below are screenshots of my current progress. All photos shown are of web projects coded by myself and redesigned by myself from CVS Health's existing design.
 
