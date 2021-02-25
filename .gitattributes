@@ -1,2 +1,2 @@
-*.php linguist-language=html
+*.php linguist-language=php
 *.hack linguist-detectable=false
