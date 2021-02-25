@@ -1,0 +1,135 @@
+/********************/
+/*****HOME STYLE*****/
+/********************/
+.home-hero-container {
+    /*removes padding and sets up css grid - styles mobile layout*/
+    padding: 0px!important;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: calc(40vh - 32px) 1fr;
+    grid-template-areas: 
+    "empty empty"
+    "body body";
+}
+
+.home-hero-body-container {
+    /*assigns the home-hero-body-container class to the body grid area*/
+    grid-area: body;
+}
+
+.home-hero-body {
+    /*sets background color of main content half to white*/
+    background-color: white;
+    padding: 30px;
+}
+
+.home-hero-empty {
+    /*sets top half of mobile layout to the background photo*/
+    grid-area: empty;
+    background-size:cover;
+    background-position: center;
+}
+
+.hero-1 {
+    background-image: url("../img/hero/cvs-health-launches-symphony-to-support-senior-safety-at-home-and-enhance-caregiver-1-16x9.jpg");
+}
+
+.hero-2 {
+    background-image: url("../img/hero/cvs-health-expands-community-access-covid-19-vaccines-1-16x9.jpg");
+}
+
+.home-hero-body>p,.home-hero-body>h2 {
+    /*styling paragraph and h2 on home body*/
+    text-align: center;
+}
+
+.home-hero-body>a {
+    text-decoration: none;
+}
+
+.btn-readmore {
+    /*styling read more button*/
+    margin: auto !important; 
+    display: flex !important;
+    align-items: center;
+    padding:10px 20px !important;
+}
+
+.btn-readmore > svg {
+    /*styling read more book icon */
+    height: 40px;
+    margin-right:10px;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+
+    /*sets bg image for entire container on desktop*/
+    .home-hero-container {
+        background-size:cover;
+        background-position: center;
+        grid-template-areas: 
+        "empty empty"
+        "body empty";
+    }
+
+    .hero-1 {
+        background-image: url("../img/hero/cvs-health-launches-symphony-to-support-senior-safety-at-home-and-enhance-caregiver-1-16x9.jpg");
+    }
+
+    .hero-2 {
+        background-image: url("../img/hero/cvs-health-expands-community-access-covid-19-vaccines-1-16x9.jpg");
+    }
+
+    /*sets second half container to a flex container on desktop and centers content vertically and horizontally*/
+    .home-hero-body-container {
+        display: flex;
+        
+    }
+
+    .home-hero-body-container-left {
+        justify-content: left;
+    }
+
+    .home-hero-body-container-right {
+        justify-content: right;
+    }
+
+    /*sets style of body content*/
+    .home-hero-body {
+        width: 50%;
+        padding: 50px;
+        max-width: 775px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-hero-body>p,.home-hero-body>h2 {
+        text-align: left;
+    }
+
+    .home-hero-body> h2 {
+        font-size: 3rem;
+    }
+
+    .home-hero-body> p {
+        font-size: 1.3rem;
+        margin-bottom:40px;
+    }
+
+    .btn-readmore {
+        font-size: 1.3rem !important;
+        margin: initial !important;
+    }
+
+    /*removes bg image of empty half on desktop*/
+    .home-hero-empty {
+        background-image: none;
+    }
+}

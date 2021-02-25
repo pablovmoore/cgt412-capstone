@@ -1,0 +1,104 @@
+body {
+    /*to fix position:fixed nav*/
+    padding-top: 56px;
+}
+
+nav {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/*******************/
+/*****NAV STYLE*****/
+/*******************/
+
+.nav-link, .form-control, .btn .dropdown-item {
+    /*sets nav elements font-family*/
+    font-family: 'Lato', sans-serif!important;
+}
+
+.nav-link, .btn {
+    /*sets nav links and button font-weight*/
+    font-weight: 700!important;
+}
+
+.form-control, .dropdown-item {
+    /*sets search bar font-weight*/
+    font-weight: 300!important;
+}
+
+/**********************/
+/*****FOOTER STYLE*****/
+/**********************/
+
+footer {
+    /*general footer styling*/
+    padding: 50px;
+    background-color: black;
+    color: white;
+    font-family: 'Lato', sans-serif!important;
+}
+
+.footer-link-ul {
+    /*removes the bullets and padding from ul*/
+    padding: 0px;
+    list-style: none ;
+}
+
+.footer-link-ul li::before {
+    /*accessibility fix for safari*/
+    content: "\200B";
+}
+
+ul.footer-link-ul > li {
+    /*adds a margin under each footer link*/
+    margin-bottom: 10px;
+}
+
+a.footer-link:link, a.footer-link:visited, a.footer-link:active {
+    /*sets all footer links colors except hover to white*/
+    color: white;
+    text-decoration: none;
+}
+
+a.footer-link:hover {
+    /*sets hover footer link color to red*/
+    color: red;
+    text-decoration: none;
+}
+
+#footer-logo, #footer-copyright, #footer-social {
+    /*centers sub footer elements by default (mobile)*/
+    text-align: center;
+}
+
+.footer-social-icon {
+    /*sets height and spacing for footer social icons*/
+    height: 25px; 
+    margin-right: 25px;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+    /*on desktop, add spacing under footer h2s*/
+    .footer-h2 {
+        margin-bottom: 25px;
+    }
+
+    /*sets text align for sub footer elements on desktop*/
+    #footer-logo {
+        text-align: left;
+    }
+
+    #footer-copyright {
+        text-align: center;
+    }
+
+    #footer-social {
+        text-align: right;
+    }
+
+    
+}

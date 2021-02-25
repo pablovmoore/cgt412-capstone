@@ -1,0 +1,163 @@
+body {
+    /*to fix position:fixed nav*/
+    padding-top: 64px;
+}
+
+nav {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+/*******************/
+/*****NAV STYLE*****/
+/*******************/
+
+.nav-link, .form-control, .btn .dropdown-item {
+    /*sets nav elements font-family*/
+    font-family: 'Lato', sans-serif!important;
+}
+
+.nav-link, .btn {
+    /*sets nav links and button font-weight*/
+    font-weight: 700!important;
+}
+
+.form-control, .dropdown-item {
+    /*sets search bar font-weight*/
+    font-weight: 300!important;
+}
+
+/**********************/
+/*****FOOTER STYLE*****/
+/**********************/
+
+footer {
+    /*general footer styling*/
+    padding: 50px;
+    background-color: black;
+    color: white;
+    font-family: 'Lato', sans-serif!important;
+}
+
+.footer-link-ul {
+    /*removes the bullets and padding from ul*/
+    padding: 0px;
+    list-style: none ;
+}
+
+.footer-link-ul li::before {
+    /*accessibility fix for safari*/
+    content: "\200B";
+}
+
+ul.footer-link-ul > li {
+    /*adds a margin under each footer link*/
+    margin-bottom: 10px;
+}
+
+a.footer-link:link, a.footer-link:visited, a.footer-link:active {
+    /*sets all footer links colors except hover to white*/
+    color: white;
+    text-decoration: none;
+}
+
+a.footer-link:hover {
+    /*sets hover footer link color to red*/
+    color: red;
+    text-decoration: none;
+}
+
+#footer-logo, #footer-copyright, #footer-social {
+    /*centers sub footer elements by default (mobile)*/
+    text-align: center;
+}
+
+.footer-social-icon {
+    /*sets height and spacing for footer social icons*/
+    height: 25px; 
+    margin-right: 25px;
+}
+
+/********************/
+/*****HOME STYLE*****/
+/********************/
+.home-hero-container {
+    /*removes padding and sets up css grid - styles mobile layout*/
+    padding: 0px!important;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: calc(50vh - 32px) calc(50vh - 32px);
+    grid-template-areas: 
+    "empty empty"
+    "body body";
+}
+
+.home-hero-body-container {
+    /*assigns the home-hero-body-container class to the body grid area*/
+    grid-area: body;
+}
+
+.home-hero-body {
+    /*sets background color of main content half to white*/
+    background-color: white;
+}
+
+.home-hero-empty {
+    /*sets top half of mobile layout to the background photo*/
+    grid-area: empty;
+    background-image: url("../img/hero/cvs-health-launches-symphony-to-support-senior-safety-at-home-and-enhance-caregiver-1-16x9.jpg");
+    background-size:cover;
+    background-position: center;
+}
+
+@media only screen and (min-width: 992px) {
+    /*on desktop, add spacing under footer h2s*/
+    .footer-h2 {
+        margin-bottom: 25px;
+    }
+
+    /*sets text align for sub footer elements on desktop*/
+    #footer-logo {
+        text-align: left;
+    }
+
+    #footer-copyright {
+        text-align: center;
+    }
+
+    #footer-social {
+        text-align: right;
+    }
+
+    /*sets bg image for entire container on desktop*/
+    .home-hero-container {
+        background-image: url("../img/hero/cvs-health-launches-symphony-to-support-senior-safety-at-home-and-enhance-caregiver-1-16x9.jpg");
+        background-size:cover;
+        background-position: center;
+        grid-template-areas: 
+        "empty body"
+        "empty body";
+    }
+    
+    /*sets second half container to a flex container on desktop and centers content vertically and horizontally*/
+    .home-hero-body-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*sets style of body content*/
+    .home-hero-body {
+        width: 90%;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    /*makes the main body content a square*/
+    .home-hero-body:after {
+        content: "";
+        display: block;
+        padding-bottom: 90%;
+    }
+
+    /*removes bg image of empty half on desktop*/
+    .home-hero-empty {
+        background-image: none;
+    }
+}

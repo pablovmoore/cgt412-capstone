@@ -1,0 +1,58 @@
+/********************/
+/*****NEWS STYLE*****/
+/********************/
+.news-container {
+    /*removes padding and sets up css grid - styles mobile layout*/
+    padding: 0px!important;
+    display: grid;
+    grid-template-columns: 1fr 40vw 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "body body body";
+}
+
+.news-body {
+    padding: 30px;
+    grid-area: body;
+    position: relative;
+}
+
+.news-title {
+    font-size: 2.5rem;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.news-body-share {
+    position:absolute;
+    text-align: right;
+    left: -125px;
+}
+
+.news-body-highlight {
+    border-left: red solid 5px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.news-image {
+    background-image: url("../img/hero/cvs-health-launches-symphony-to-support-senior-safety-at-home-and-enhance-caregiver-1-16x9.jpg");
+    background-size:cover;
+    background-position: center;
+    height: 40vw;
+    max-height: 500px;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    /*sets bg image for entire container on desktop*/
+    .news-container {
+        grid-template-areas: 
+        ". body .";
+    }
+
+}
